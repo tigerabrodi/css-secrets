@@ -6,6 +6,8 @@ My notes from the book CSS Secrets ✍️
 
 - [Background and Borders](https://github.com/tigerabrodi/css-secrets#background-and-borders)
 
+- [Shapes](https://github.com/tigerabrodi/css-secrets#shapes)
+
 ### Background and Borders
 
 - **Translucent Borders:** Styling borders with `hsla` or `rgba` colors is possible (for example borders with lessened opacity). If you are using a background color, take into account that normally the `background-clip` is set to `border-box`, hence the background will extend underneath the border. In this case we have to set the `background-clip` to `padding-box`, in order to tell the browser to clip the background at the padding edge.
@@ -20,4 +22,7 @@ My notes from the book CSS Secrets ✍️
 
 - **Complex background patterns:** More complex background patterns can be achieved as well. By having a background color in place using `background`, generating multiple gradients via `background-image`, and using other background properties such as `background-position` and `background-size`.
 
-- **Continuous image borders:** You can also have images as borders, even when using just one element. This can be achieved by first setting a border that is transparent, and then the `background-origin` to `border-box`. You would also need two background images using `background`, the first one being either a color set via `linear-gradient` or the image you want, the second is the image which will be used as the border. Then using `background-clip`, clip the first image to the `padding-box`, and the second one to the `border-box`. 
+- **Continuous image borders:** You can also have images as borders, even when using just one element. This can be achieved by first setting a border that is transparent, and then the `background-origin` to `border-box`. You would also need two background images using `background`, the first one being either a color set via `linear-gradient` or the image you want, the second is the image which will be used as the border. Then using `background-clip`, clip the first image to the `padding-box`, and the second one to the `border-box`.
+
+### Shapes
+
