@@ -10,6 +10,8 @@ My notes from the book CSS Secrets ✍️
 
 - [Visual Effects](https://github.com/tigerabrodi/css-secrets#visual-effects)
 
+- [Visual Effects](https://github.com/tigerabrodi/css-secrets#typography)
+
 ### Background and Borders
 
 - **Translucent Borders:** Styling borders with `hsla` or `rgba` colors is possible (for example borders with lessened opacity). If you are using a background color, take into account that normally the `background-clip` is set to `border-box`, hence the background will extend underneath the border. In this case we have to set the `background-clip` to `padding-box`, in order to tell the browser to clip the background at the padding edge.
@@ -93,4 +95,6 @@ We can also just simply use `clip-path`.
 
 - **Color tinting:** For color tinting effect you can use the `filter` property as well. The properties `background-blend-mode` and `mix-blend-mode` also exist to achieve the effect.
 
-- **Frosted glass effect:** 
+- **Frosted glass effect:** Blurring the background where the text is in order for the text to be more visible and achieve a classy effect. It is a bit tricky but can be achieved by using a pseudo element for the text as a background and blurring it out using `blur()`.
+
+### Typography
