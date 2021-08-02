@@ -28,4 +28,6 @@ My notes from the book CSS Secrets ✍️
 
 - **Flexible ellipses:** `border-radius` doesn't just accept a fixed value, but also percentages. It also accepts horizontal and vertical radii, which you can define by using slash. You can also specify the radius for each corner of the border, by using a specified property such as `border-top-left-radius`, there you can also specify the horizontal and vertical radii, the first value would be the horizontal and the second one the vertical.
 
-- **Parallelograms:** 
+- **Parallelograms:** Creating parellelogram-like shapes is possible by using the `skew` function from `transform`. If may need to wrap the text in another element depending on your use-case, and skew it in the opposite direction, if you for example only want the background to be skewed. You can also use a pseudo element. Give the pseudo element a position of absolute and the parent a position of relative, lower the z-index and also set all of the direction values (top, left, right, bottom) to zero. Using a pseudo element is much more flexible, you don't need another element. It is also a useful technique for other scenarios.
+
+- **Diamond images:**
