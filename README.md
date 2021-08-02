@@ -82,5 +82,3 @@ background-clip: padding-box;
 ```
 
 We can also just simply use `clip-path`.
-
-- **Trapezoid tabs:**
