@@ -8,6 +8,8 @@ My notes from the book CSS Secrets ✍️
 
 - [Shapes](https://github.com/tigerabrodi/css-secrets#shapes)
 
+- [Visual Effects](https://github.com/tigerabrodi/css-secrets#visual-effects)
+
 ### Background and Borders
 
 - **Translucent Borders:** Styling borders with `hsla` or `rgba` colors is possible (for example borders with lessened opacity). If you are using a background color, take into account that normally the `background-clip` is set to `border-box`, hence the background will extend underneath the border. In this case we have to set the `background-clip` to `padding-box`, in order to tell the browser to clip the background at the padding edge.
@@ -82,3 +84,13 @@ background-clip: padding-box;
 ```
 
 We can also just simply use `clip-path`.
+
+### Visual Effects
+
+- **One-sided shadows:** The fourth, lesser known value of `box-shadow` is the spread radius. The spread radius increases or (if negative) decreases the size of the shadow by the amount you specify. In order to have shadows at the opposite sides, you need to declare two shadows to accomplish that.
+
+- **Irregular drop shadows:** The `filter` property of CSS exist with which you can create wonderful effects, and even through its drop shadow, give SVGs and other elements with complex shapes shadows.
+
+- **Color tinting:** For color tinting effect you can use the `filter` property as well. The properties `background-blend-mode` and `mix-blend-mode` also exist to achieve the effect.
+
+- **Frosted glass effect:** 
