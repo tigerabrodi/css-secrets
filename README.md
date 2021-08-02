@@ -10,7 +10,7 @@ My notes from the book CSS Secrets ✍️
 
 - [Visual Effects](https://github.com/tigerabrodi/css-secrets#visual-effects)
 
-- [Visual Effects](https://github.com/tigerabrodi/css-secrets#typography)
+- [Typography](https://github.com/tigerabrodi/css-secrets#typography)
 
 ### Background and Borders
 
