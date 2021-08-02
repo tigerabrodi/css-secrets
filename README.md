@@ -26,3 +26,6 @@ My notes from the book CSS Secrets ✍️
 
 ### Shapes
 
+- **Flexible ellipses:** `border-radius` doesn't just accept a fixed value, but also percentages. It also accepts horizontal and vertical radii, which you can define by using slash. You can also specify the radius for each corner of the border, by using a specified property such as `border-top-left-radius`, there you can also specify the horizontal and vertical radii, the first value would be the horizontal and the second one the vertical.
+
+- **Parallelograms:** 
