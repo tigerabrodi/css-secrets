@@ -30,4 +30,6 @@ My notes from the book CSS Secrets ✍️
 
 - **Parallelograms:** Creating parellelogram-like shapes is possible by using the `skew` function from `transform`. If may need to wrap the text in another element depending on your use-case, and skew it in the opposite direction, if you for example only want the background to be skewed. You can also use a pseudo element. Give the pseudo element a position of absolute and the parent a position of relative, lower the z-index and also set all of the direction values (top, left, right, bottom) to zero. Using a pseudo element is much more flexible, you don't need another element. It is also a useful technique for other scenarios.
 
-- **Diamond images:**
+- **Diamond images:** One solution here is to use `transform` and two elements, the image and its parent. On the parent, set `overflow: hidden`, give it a specified width and rotate it by 45 degrees. The image, rotate it in the opposite direction by 45 degrees, give it a `max-width: 100%;` and `scale(1.42)`. The other solution would be to simply use `clip-path`. We can achieve the same result as the first solution by simply applying: `clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);`. You can even apply cool animations using the same property if you wish to.
+
+- **Cutout corners:** 
