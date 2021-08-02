@@ -32,4 +32,55 @@ My notes from the book CSS Secrets ✍️
 
 - **Diamond images:** One solution here is to use `transform` and two elements, the image and its parent. On the parent, set `overflow: hidden`, give it a specified width and rotate it by 45 degrees. The image, rotate it in the opposite direction by 45 degrees, give it a `max-width: 100%;` and `scale(1.42)`. The other solution would be to simply use `clip-path`. We can achieve the same result as the first solution by simply applying: `clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);`. You can even apply cool animations using the same property if you wish to.
 
-- **Cutout corners:** 
+- **Cutout corners:** In order to achieve cutout corners, meaning, corners that have a different shape due to transparency, we can take advantage of `linear-gradient`. Gradients can accept an angle direction and color stop positions in absolute lengths, we can also specify the `background-position` due to using `background`.
+
+An example:
+
+```css
+background: #58a;
+background:
+    linear-gradient(135deg, transparent 15px, #58a 0)
+        top left,
+    linear-gradient(-135deg, transparent 15px, #655 0)
+        top right,
+    linear-gradient(-45deg, transparent 15px, #58a 0)
+        bottom right,
+    linear-gradient(45deg, transparent 15px, #655 0)
+        bottom left;
+background-size: 50% 50%;
+background-repeat: no-repeat;
+```
+
+Curved cutout corners can also be achieved by using radial gradients. An example:
+
+```css
+background: #58a;
+background:
+    radial-gradient(circle at top left,
+             transparent 15px, #58a 0) top left,
+    radial-gradient(circle at top right,
+             transparent 15px, #58a 0) top right,
+    radial-gradient(circle at bottom right,
+             transparent 15px, #58a 0) bottom right,
+    radial-gradient(circle at bottom left,
+             transparent 15px, #58a 0) bottom left;
+background-size: 50% 50%;
+background-repeat: no-repeat;
+```
+
+We can also use `border-image` and inline an SVG that is already sliced.
+
+```css
+border: 20px solid transparent;
+border-image: 1 url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg"\
+         width="3" height="3" fill="%2358a">\
+    <polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2"/>\
+    </svg>');
+background: #58a;
+background-clip: padding-box;
+```
+
+We can also just simply use `clip-path`.
+
+- **Trapezoid tabs:**
