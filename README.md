@@ -12,6 +12,8 @@ My notes from the book CSS Secrets ✍️
 
 - [Typography](https://github.com/tigerabrodi/css-secrets#typography)
 
+- [User Experience](https://github.com/tigerabrodi/css-secrets#user-experience)
+
 ### Background and Borders
 
 - **Translucent Borders:** Styling borders with `hsla` or `rgba` colors is possible (for example borders with lessened opacity). If you are using a background color, take into account that normally the `background-clip` is set to `border-box`, hence the background will extend underneath the border. In this case we have to set the `background-clip` to `padding-box`, in order to tell the browser to clip the background at the padding edge.
@@ -98,3 +100,65 @@ We can also just simply use `clip-path`.
 - **Frosted glass effect:** Blurring the background where the text is in order for the text to be more visible and achieve a classy effect. It is a bit tricky but can be achieved by using a pseudo element for the text as a background and blurring it out using `blur()`.
 
 ### Typography
+
+- **Hyphenation:** This effect can be achieved by using `hyphens`, and setting its value to `hyphens: auto;`.
+
+- **Inserting line breaks:** Line breaks can be achieved by using `<br>` or placing an after pseudo element of `content: "\A";`. In case you want white space to be preserved, to the pesudo element you can add `white-space: pre;`.
+
+- **Zebra-striped text lines:** This effect can be achieved by using `linear-gradient`. Zebra-striped background color of the text.
+
+An example:
+
+```css
+padding: .5em;
+line-height: 1.5;
+background: beige;
+background-size: auto 3em;
+background-origin: content-box;
+background-image: linear-gradient(rgba(0,0,0,.2) 50%, 
+                                      transparent 0);
+```
+
+- **Adjusting tab width:** The tab width can be adjusted by using `tab-size`.
+
+- **Ligatures:** You can choose whether you want to turn the font ligatures on or off via the `font-variant-ligatures` property.
+
+- **Realistic text effects:** There were some text effects in the book.
+
+I found stroked text really interesting, as if the letters were to have an outline color.
+
+An example:
+
+```css
+background: deeppink;
+color: white;
+text-shadow: 1px 1px black, -1px -1px black,
+             1px -1px black, -1px 1px black;
+```
+
+Glowing effect is also a cool one on text. It can be achieved by using a couple of layered `text-shadow`s.
+
+An example:
+
+```css
+background: #203;
+color: #ffc;
+text-shadow: 0 0 .1em, 0 0 .3em;
+```
+
+Extruded text is also a cool effect, makes the text look really 3D. Multiple layers of text shadows are used to accomplish this.
+
+An example:
+
+```css
+background: #58a;
+color: white;
+text-shadow: 0 1px hsl(0,0%,85%),
+             0 2px hsl(0,0%,80%),
+             0 3px hsl(0,0%,75%),
+             0 4px hsl(0,0%,70%),
+             0 5px hsl(0,0%,65%),
+             0 5px 10px black;
+```
+
+### User Experience
