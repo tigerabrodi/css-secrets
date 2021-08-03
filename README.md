@@ -14,6 +14,8 @@ My notes from the book CSS Secrets ✍️
 
 - [User Experience](https://github.com/tigerabrodi/css-secrets#user-experience)
 
+- [Structure and Layout](https://github.com/tigerabrodi/css-secrets#structure-and-layout)
+
 ### Background and Borders
 
 - **Translucent Borders:** Styling borders with `hsla` or `rgba` colors is possible (for example borders with lessened opacity). If you are using a background color, take into account that normally the `background-clip` is set to `border-box`, hence the background will extend underneath the border. In this case we have to set the `background-clip` to `padding-box`, in order to tell the browser to clip the background at the padding edge.
@@ -162,3 +164,18 @@ text-shadow: 0 1px hsl(0,0%,85%),
 ```
 
 ### User Experience
+
+- **Picking the right cursor:** You can change the cursor using the `cursor` property.
+
+- **Extending the clickable area:** You can extend the clickable area by using a pseudo element, which doesn't affect the styling at the original element at all. An example of a button that is 10 pixels larger in every direction:
+
+```css
+button::before {
+    content: '';
+    position: absolute;
+    top: -10px; right: -10px;
+    bottom: -10px; left: -10px;
+}
+```
+
+### Structure and Layout
