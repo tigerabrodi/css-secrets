@@ -2,6 +2,8 @@
 
 My notes from the book CSS Secrets ✍️
 
+I take notes when I encounter something that is interesting, new or that I know will likely be useful multiple times in the future 😁 👏 🚀 📖
+
 ## Table of Contents
 
 - [Background and Borders](https://github.com/tigerabrodi/css-secrets#background-and-borders)
@@ -14,7 +16,7 @@ My notes from the book CSS Secrets ✍️
 
 - [User Experience](https://github.com/tigerabrodi/css-secrets#user-experience)
 
-- [Structure and Layout](https://github.com/tigerabrodi/css-secrets#structure-and-layout)
+- [Transitions and Animations](https://github.com/tigerabrodi/css-secrets#transitions-and-animations)
 
 ### Background and Borders
 
@@ -178,4 +180,4 @@ button::before {
 }
 ```
 
-### Structure and Layout
+### Transitions and Animations
