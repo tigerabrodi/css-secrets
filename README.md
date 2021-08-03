@@ -181,3 +181,26 @@ button::before {
 ```
 
 ### Transitions and Animations
+
+- **Typing animation:** This actually boggled my mind, but a typing animation can actually be achieved using pure CSS, and no, it doesn't require millions of lines 😄.
+
+The example:
+
+```css
+@keyframes typing {
+    from { width: 0 }
+}
+
+@keyframes caret {
+    50% { border-color: transparent; }
+}
+
+h1 {
+    width: 15ch; /* Width of text */
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .05em solid;
+    animation: typing 6s steps(15),
+               caret 1s steps(1) infinite;
+}
+```
